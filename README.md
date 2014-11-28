@@ -1,5 +1,11 @@
 #Oracle Controller
 
+###Object
+The object is a wheel with all ASCII characters engraved on it, that rotates to show characters one by one (and an LED to light up said character):
+
+![object](object.jpg)
+![detail](detail.jpg)
+
 ###How to run:
 This program should be run on a raspberry pi, connected to the oracle wheel (circuit decribed [here](https://upverter.com/bastien.girschig@gmail.com/46dc96200ea85d84/wifiCrakcer/), object images below), containing a stepper motor, an easyDriver, an LED, and a switch).
 No Build required: simply push the "oracleController.py" file on the raspberry pi, then run it:
@@ -27,12 +33,11 @@ record new sequence? (y/n)
 if you want to, type `y` then use the same commands as before. return key with nothing will save the current position and continue on the next one.
 when you are done, type `e` to exit the record mode
 
-The sequence will then be played in loops indefinitely
+The sequence will then be played in loop indefinitely.
 
-###Object
-A wheel with all ASCII characters engraved on it, that rotates to show characters one by one:
-![object](object.jpg)
-![detail](detail.jpg)
+###Known bugs
+- There seems to be a problem with the record sequence phase: looks like missed steps during recording make it completely wrong at play (but stays the same in each loop).
+- The wifi cracking part is not really set up.
 
 ###Credits
 Project made by Martin Hertig and Bastien Girschig.
