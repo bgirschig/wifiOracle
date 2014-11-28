@@ -6,9 +6,24 @@ The object is a wheel with all ASCII characters engraved on it, that rotates to 
 ![object](object.jpg)
 ![detail](detail.jpg)
 
-###How to run:
-This program should be run on a raspberry pi, connected to the oracle wheel (circuit decribed [here](https://upverter.com/bastien.girschig@gmail.com/46dc96200ea85d84/wifiCrakcer/), object images below), containing a stepper motor, an easyDriver, an LED, and a switch).
-No Build required: simply push the "oracleController.py" file on the raspberry pi, then run it:
+
+###Hardware requirements
+   * 1x Raspberry Pi with SD card and power supply
+   * 1x Stepper Motor
+   * 1x Stepper driver and power supply for the motor
+   * Breadboard, ON-Off Switch, Cable, etc.
+   * 1x USB Wifi Card from this list: [http://pwnpi.sourceforge.net/index.html_q=wireless.html](http://pwnpi.sourceforge.net/index.html_q=wireless.html)
+   * 4mm MDF, laser cutter, screws, glue & paint
+
+
+###Software dependencies
+   * Operating system: PwnPi (All needed Wifi-Cracking Scripts preinstalled (Aircrack-ng, Reaver etc.), Wifi-drivers patched for injection) [http://pwnpi.sourceforge.net/](http://pwnpi.sourceforge.net/)
+   * Wifite.py for automating the wifi-scripts: [https://code.google.com/p/wifite/](https://code.google.com/p/wifite/)
+
+
+###How to run
+This program should be run on a raspberry pi, connected to the oracle wheel (circuit decribed [here](https://upverter.com/bastien.girschig@gmail.com/46dc96200ea85d84/wifiCrakcer/), object images below).
+No Build required: simply push "wifite.py" and "oracleController.py" file to the home folder on the raspberry pi, then run:
 ```
 sudo python ~/oracleController.py
 ```
@@ -37,7 +52,7 @@ The sequence will then be played in loop indefinitely.
 
 ###Known bugs
 - There seems to be a problem with the record sequence phase: looks like missed steps during recording make it completely wrong at play (but stays the same in each loop).
-- The wifi cracking part is not really set up.
+- wifite.py is not connected to the oracleController.py. 
 
 ###Credits
 Project made by Martin Hertig and Bastien Girschig.
