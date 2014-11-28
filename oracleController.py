@@ -181,8 +181,8 @@ try:
 	calibrate()
 	if(raw_input("record new sequence? (y/n)") == "y"):
 		recordSequence()
-	if(raw_input("load cracked? (y/n)") == "y"):
-		print(load_cracked())
+	# if(raw_input("load cracked? (y/n)") == "y"):
+		# print(load_cracked())
 
 	while True:
 		playSequence(sequence)
